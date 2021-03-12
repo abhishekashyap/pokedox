@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 
 type PokemonListItemType = {
   name: string;
@@ -28,9 +30,22 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      {pokemons &&
-        pokemons.map((pokemon) => <li key={pokemon.name}>{pokemon.name}</li>)}
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Pokédex</h1>
+      {pokemons ? (
+        pokemons.map((pokemon) => {
+          const urlParams = pokemon.url.split("/");
+          // Get the last param of the URL
+          const id = urlParams[urlParams.length - 2];
+          return (
+            <Link to={`/${id}`} className={styles.listItem} key={id}>
+              {pokemon.name}
+            </Link>
+          );
+        })
+      ) : (
+        <p>No Pokemons found</p>
+      )}
     </div>
   );
 }

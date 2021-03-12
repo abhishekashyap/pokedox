@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styles from './Details.module.css';
 
 type ParamsType = { id: string };
 

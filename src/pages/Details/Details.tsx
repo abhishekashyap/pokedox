@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { fetchPokemonDetails } from "../../api";
 import { PokemonDetailsType, ParamsType } from "../../types";
 import styles from "./Details.module.css";
 
 export default function Details() {
   const [pokemon, setPokemon] = useState<PokemonDetailsType>();
-
-  async function fetchPokemonDetails(id: number) {
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    const data = (await res.json()) as PokemonDetailsType;
-    setPokemon(data);
-    console.log(data);
-  }
-
   const { id } = useParams<ParamsType>();
 
   useEffect(() => {
-    if (id) fetchPokemonDetails(Number(id));
+    if (id) fetchPokemonDetails(Number(id)).then((data) => setPokemon(data));
   }, [id]);
 
   if (pokemon) {

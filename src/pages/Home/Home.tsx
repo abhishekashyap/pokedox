@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { PokemonListItemType, FetchPokemonsResponseType } from "../../types";
+import { fetchPokemons } from "../../api";
+import { PokemonListItemType } from "../../types";
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -9,19 +10,12 @@ export default function Home() {
   const [hasNext, setHasNext] = useState(false);
   const [hasPrev, setHasPrev] = useState(false);
 
-  async function fetchPokemons(offset: number, limit: number = 10) {
-    const res = await fetch(
-      `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-    );
-    const data = (await res.json()) as FetchPokemonsResponseType;
-    console.log(data);
-    setPokemons(data.results);
-    setHasNext(!data.next);
-    setHasPrev(!data.previous);
-  }
-
   useEffect(() => {
-    fetchPokemons(page * 10);
+    fetchPokemons(page * 10).then((data) => {
+      setPokemons(data.results);
+      setHasNext(!data.next);
+      setHasPrev(!data.previous);
+    });
   }, [page]);
 
   return (

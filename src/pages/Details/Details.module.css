@@ -32,3 +32,9 @@
   font-size: x-large;
   text-transform: capitalize;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

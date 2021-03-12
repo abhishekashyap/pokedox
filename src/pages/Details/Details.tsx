@@ -53,14 +53,18 @@ export default function Details() {
     return (
       <div className={styles.container}>
         <div className={styles.card}>
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          className={styles.avatar}
-        />
-        <div className={styles.pokedetails}>
-          <h3 className={styles.name}>{pokemon.name}</h3>
-        </div>
+          <img
+            src={pokemon.sprites.front_default}
+            alt={pokemon.name}
+            className={styles.avatar}
+          />
+          <div className={styles.pokedetails}>
+            <h3 className={styles.name}>{pokemon.name}</h3>
+            <div className={styles.content}>
+              <span>Height: {pokemon.height} meters</span>
+              <span>Weight: {pokemon.weight} Kg</span>
+            </div>
+          </div>
         </div>
       </div>
     );

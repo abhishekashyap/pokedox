@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #95a5a6; */
+  width: 50%;
+  margin: auto;
+  align-items: center;
+}
+
+.avatar {
+  height: 10rem;
+  width: 10rem;
+  border: 5px solid #d3d3d3;
+  border-radius: 999px;
+}
+
+.pokedetails {
+    
+}

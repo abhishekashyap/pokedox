@@ -33,3 +33,25 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+
+.btns {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  /* display: flex; */
+  height: 100%;
+  width: 100%;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  border: none;
+  padding: 1.2rem;
+  margin: 1rem;
+  border: 1px solid #d3d3d3;
+  background: #f9fafb;
+  justify-content: center;
+  border-radius: 999px;
+}

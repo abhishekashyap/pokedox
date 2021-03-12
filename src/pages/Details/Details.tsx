@@ -61,8 +61,8 @@ export default function Details() {
           <div className={styles.pokedetails}>
             <h3 className={styles.name}>{pokemon.name}</h3>
             <div className={styles.content}>
-              <span>Height: {pokemon.height} meters</span>
-              <span>Weight: {pokemon.weight} Kg</span>
+              <span>Height is {pokemon.height} meters</span>
+              <span>Weighs {pokemon.weight} Kg</span>
             </div>
           </div>
         </div>
@@ -70,5 +70,5 @@ export default function Details() {
     );
   }
 
-  return <div>Details not found</div>;
+  return <div className={styles.container}>Details not found</div>;
 }

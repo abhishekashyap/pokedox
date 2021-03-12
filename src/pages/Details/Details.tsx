@@ -52,13 +52,15 @@ export default function Details() {
   if (pokemon) {
     return (
       <div className={styles.container}>
+        <div className={styles.card}>
+        <img
+          src={pokemon.sprites.front_default}
+          alt={pokemon.name}
+          className={styles.avatar}
+        />
         <div className={styles.pokedetails}>
-          <img
-            src={pokemon.sprites.front_default}
-            alt={pokemon.name}
-            className={styles.avatar}
-          />
-          <h3>{pokemon.name}</h3>
+          <h3 className={styles.name}>{pokemon.name}</h3>
+        </div>
         </div>
       </div>
     );

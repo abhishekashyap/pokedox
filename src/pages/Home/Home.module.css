@@ -1,34 +1,35 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    /* background-color: #95a5a6; */
-    width: 50%;
-    margin: auto;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #95a5a6; */
+  width: 50%;
+  margin: auto;
+  align-items: center;
 }
 
 .heading {
-    font-size: 4rem;
-    font-weight: bolder;
+  font-size: 4rem;
+  font-weight: bolder;
 }
 
 .listItem {
-    list-style: none;
-    text-transform: capitalize;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    margin-top: 1rem;
-    background: #F9FAFB;
-    border-radius: 10px;
-    border: 1px solid #D3D3D3;
-    cursor: pointer;
-    transition: 0.05s ease-in-out;
-    text-decoration: none;
-    color: #222222;
+  list-style: none;
+  text-transform: capitalize;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+  transition: 0.05s ease-in-out;
+  text-decoration: none;
+  color: #222222;
 }
 
 .listItem:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

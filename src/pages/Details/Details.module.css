@@ -2,9 +2,22 @@
   display: flex;
   flex-direction: column;
   /* background-color: #95a5a6; */
+  height: 100vh;
+  justify-content: center;
   width: 50%;
   margin: auto;
   align-items: center;
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .avatar {
@@ -14,6 +27,8 @@
   border-radius: 999px;
 }
 
-.pokedetails {
-    
+.name {
+  margin-top: 2rem;
+  font-size: x-large;
+  text-transform: capitalize;
 }

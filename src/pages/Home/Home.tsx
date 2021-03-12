@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { PokemonListItemType, FetchPokemonsResponseType } from "../../types";
 import styles from "./Home.module.css";
-
-type PokemonListItemType = {
-  name: string;
-  url: string;
-}[];
-
-type FetchPokemonsResponseType = {
-  count: 1118;
-  next: string | null;
-  previous: string | null;
-  results: PokemonListItemType;
-};
 
 export default function Home() {
   const [pokemons, setPokemons] = useState<PokemonListItemType>();

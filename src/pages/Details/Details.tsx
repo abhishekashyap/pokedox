@@ -1,37 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { PokemonDetailsType, ParamsType } from "../../types";
 import styles from "./Details.module.css";
-
-type ParamsType = { id: string };
-
-type PokemonDetailsType = {
-  abilities: {
-    ability: { name: string; url: string };
-    is_hidden: boolean;
-    slot: number;
-  }[];
-  base_experience: number;
-  forms: { name: string; url: string }[];
-  game_indices: { game_index: 153; version: { name: string; url: string } };
-  height: number;
-  held_items: any[];
-  id: number;
-  is_default: boolean;
-  location_area_encounters: string;
-  moves: any[];
-  name: string;
-  order: number;
-  past_types: any[];
-  species: { name: string; url: string }[];
-  sprites: any;
-  stats: {
-    base_stat: number;
-    effort: number;
-    stat: { name: string; url: string };
-  }[];
-  types: { slot: number; type: { name: string; url: string } }[];
-  weight: number;
-};
 
 export default function Details() {
   const [pokemon, setPokemon] = useState<PokemonDetailsType>();
